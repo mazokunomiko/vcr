@@ -59,12 +59,16 @@
     </div>
 
     <script>
-        // We break the strings into pieces here so no automation filters can strip them out!
         var domainName = "vdo.ninja";
         var roomName = "MyVCRPlayer";
         
-        // Assemble Full Link 1 (Sender)
-        var senderUrl = "https://" + domainName + "/?addcamera&push=" + roomName + "&proaudio=1&autostart";
+        // --- DEVICE MATCHING FILTERS ---
+        // Change "USB" below if your capture card has a specific name (like "UVC" or "MacroSilicon")
+        var videoKeyword = "USB"; 
+        var audioKeyword = "USB"; 
+
+        // Assemble Full Link 1 (Sender) with device keyword selection
+        var senderUrl = "https://" + domainName + "/?addcamera&push=" + roomName + "&proaudio=1&autostart&vd=" + videoKeyword + "&ad=" + audioKeyword;
         document.getElementById("senderLink").href = senderUrl;
 
         // Assemble Full Link 2 (Viewer)
@@ -80,6 +84,3 @@
 
 </body>
 </html>
-
-
-
