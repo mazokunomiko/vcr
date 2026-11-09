@@ -62,13 +62,8 @@
         var domainName = "vdo.ninja";
         var roomName = "MyVCRPlayer";
         
-        // --- DEVICE MATCHING FILTERS ---
-        // Change "USB" below if your capture card has a specific name (like "UVC" or "MacroSilicon")
-        var videoKeyword = "USB"; 
-        var audioKeyword = "USB"; 
-
-        // Assemble Full Link 1 (Sender) with device keyword selection
-        var senderUrl = "https://" + domainName + "/?addcamera&push=" + roomName + "&proaudio=1&autostart&vd=" + videoKeyword + "&ad=" + audioKeyword;
+        // Assemble Full Link 1 (Sender) using the &vdo=2 hardcoded bypass
+        var senderUrl = "https://" + domainName + "/?addcamera&push=" + roomName + "&proaudio=1&autostart&vdo=2";
         document.getElementById("senderLink").href = senderUrl;
 
         // Assemble Full Link 2 (Viewer)
@@ -84,3 +79,4 @@
 
 </body>
 </html>
+
