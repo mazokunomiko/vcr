@@ -3,80 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VCR App Workspace</title>
+    <title>VCR Player Link</title>
     <style>
         body { 
             font-family: system-ui, -apple-system, sans-serif; 
             background: #141419; 
             color: #ffffff; 
             text-align: center; 
-            padding: 50px 20px; 
+            padding: 80px 20px; 
             margin: 0;
         }
-        h1 { 
-            font-size: 28px; 
-            margin-bottom: 10px; 
-            color: #00fa9a;
-        }
-        p { 
-            color: #a0a0b0; 
-            font-size: 16px; 
-            margin-bottom: 40px; 
-        }
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
+        h1 { font-size: 28px; color: #00fa9a; margin-bottom: 30px; }
         .btn { 
-            display: block; 
-            width: 80%; 
-            max-width: 300px; 
-            padding: 18px; 
-            font-size: 18px; 
+            display: inline-block; 
+            padding: 20px 40px; 
+            font-size: 20px; 
             font-weight: bold; 
             color: #ffffff; 
+            background: #007bff;
             border: none; 
             border-radius: 12px; 
             cursor: pointer; 
+            text-decoration: none;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            transition: transform 0.2s, background 0.2s;
         }
-        .btn-sender { 
-            background: #007bff; 
-        }
-        .btn-sender:hover { 
-            background: #0056b3; 
-            transform: scale(1.02);
-        }
-        .btn-viewer { 
-            background: #28a745; 
-        }
-        .btn-viewer:hover { 
-            background: #218838; 
-            transform: scale(1.02);
-        }
+        .btn:hover { background: #0056b3; }
     </style>
 </head>
 <body>
 
-    <h1>📺 VCR Workspace Controller</h1>
-    <p>Turn on your VCR, plug in your card, and tap each step:</p>
-
-    <div class="button-container">
-        <button class="btn btn-sender" onclick="openSender()">1. Start Hardware Stream</button>
-        <button class="btn btn-viewer" onclick="openViewer()">2. Open Player Window</button>
-    </div>
-
-    <script>
-        function openSender() {
-            window.open("https://vdo.ninja", "_blank");
-        }
-        function openViewer() {
-            window.open("https://vdo.ninja", "_blank");
-        }
-    </script>
+    <h1>📺 VCR System Link Launcher</h1>
+    
+    <!-- This single link acts as both sender and listener automatically -->
+    <a class="btn" href="https://vdo.ninja">
+        Launch VCR Player Screen
+    </a>
 
 </body>
 </html>
+
