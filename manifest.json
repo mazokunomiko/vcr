@@ -1,0 +1,16 @@
+{
+  "name": "VCR Player",
+  "short_name": "VCR Player",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#141419",
+  "theme_color": "#00fa9a",
+  "icons": [
+    {
+      "src": "https://" + "mcewing7.github.io/vcr/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
